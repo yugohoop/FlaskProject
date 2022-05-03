@@ -1,0 +1,88 @@
+{% extends 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3">FilmFlixDB Update</h1>
+      <p class="col-lg-10 fs-4">
+        {% block title %} Update "{{aFilmRecord['title']}}"{% endblock%}
+      </p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form method="post" class="p-4 p-md-5 border rounded-3 bg-light bx">
+        <small class="text-lg-center">Please Enter New Film Details </small>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Title"
+            name="Title"
+            placeholder="Film title"
+            value="{{request.form['Title'] or aFilmRecord['Title']}}"
+          />
+          <label for="Title">Film Title</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="int"
+            class="form-control"
+            id="Title"
+            name="yearReleased"
+            placeholder="yearReleased"
+            value="{{request.form['yearReleased'] or aFilmRecord['yearReleased']}}"
+          />
+          <label for="Title">Year Released</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="rating"
+            name="Rating"
+            placeholder="Film Rating"
+            value="{{request.form['rating'] or aFilmRecord['rating']}}"
+          />
+          <label for="Title">Rating</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="int"
+            class="form-control"
+            id="duration"
+            name="Duration"
+            placeholder="Film Duration"
+            value="{{request.form['duration'] or aFilmRecord['duration']}}"
+          />
+          <label for="Title">Duration</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Genre"
+            name="Genre"
+            placeholder="Song Genre"
+            value="{{request.form['genre'] or aFilmRecord['genre']}}"
+          />
+          <label for="Title">Genre</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          Update Film
+        </button>
+        <hr class="my-4" />
+        <small class="text-muted">
+          update confirmation will be displayed here</small
+        >
+      </form>
+    </div>
+  </div>
+</div>
+
+{%endblock content%}

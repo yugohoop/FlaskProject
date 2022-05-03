@@ -1,0 +1,81 @@
+{% extends 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3">Add To FlimFlix DB</h1>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form method="post" class="p-4 p-md-5 border rounded-3 bg-light bx">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Title"
+            name="Title"
+            placeholder="Film title"
+            value="{{request.form['Title']}}"
+          />
+          <label for="Title">Film Title</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="int"
+            class="form-control"
+            id="yearReleased"
+            name="yearReleased"
+            placeholder="Year Released"
+            value="{{request.form['yearReleased']}}"
+          />
+          <label for="Title">Year Released</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="rating"
+            name="Rating"
+            placeholder="Film Rating"
+            value="{{request.form['rating']}}"
+          />
+          <label for="Title">Film Rating</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="int"
+            class="form-control"
+            id="duration"
+            name="Duration"
+            placeholder="Film Duration"
+            value="{{request.form['duration']}}"
+          />
+          <label for="Title">Film Duration</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Genre"
+            name="Genre"
+            placeholder="Song Genre"
+            value="{{request.form['genre']}}"
+          />
+          <label for="Title">Genre</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-success" type="submit">
+          Add Film
+        </button>
+        <hr class="my-4" />
+        <small class="text-muted">
+          Add confirmation will be displayed here</small
+        >
+      </form>
+    </div>
+  </div>
+</div>
+
+{%endblock content%}

@@ -1,0 +1,48 @@
+body {
+  background: #939ea0;
+}
+
+.display-4 {
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.display-4:hover {
+  color: rgb(97, 117, 130);
+  transform: scale(1.1);
+}
+
+.img-fluid {
+  width: 100%;
+  max-width: 350px;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.bx {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.container-fluid {
+  margin-left: 3.4rem;
+}
+
+.about {
+  margin-top: 8rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  border-radius: 5px;
+  background: #99a4a6;
+  padding: 2rem;
+}
+
+.btn {
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px,
+    rgba(246, 239, 239, 0.3) 0px 7px 13px -3px,
+    rgba(108, 107, 107, 0.2) 0px -3px 0px inset;
+}
+.btn:hover {
+  transform: scale(1.05);
+}

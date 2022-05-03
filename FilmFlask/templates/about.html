@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+<h1 class="display-4 fw-bold lh-1 mb-3">About FilmFlix DB</h1>
+
+<div class="container about">
+
+    <dl class="row">
+        <dt class="col-sm-3">C R U D:</dt>
+        <dd class="col-sm-9">Create, Read, Update, and Delete</dd>
+
+        <dt class="col-sm-3">Definition:</dt>
+        <dd class="col-sm-9">
+            <p>
+                These are the four most basic operations that can be performed with most
+                traditional database systems and they are the backbone for interacting
+                with any database.
+            </p>
+        </dd>
+
+        <dt class="col-sm-3">This Project:</dt>
+        <dd class="col-sm-9">
+            <p>
+                Built to display all four of these methods in action. Browse through the
+                site and feel free to C R U D away!
+            </p>
+        </dd>
+
+        <dt class="col-sm-3 text-truncate">Built with:</dt>
+        <dd class="col-sm-9">HTML5, CSS3, Bootstrap v5.1, SQLite, Python3 and Flask</dd>
+
+        <dt class="col-sm-3"></dt>
+        <dd class="col-sm-9">
+            <dl class="row">
+                <dt class="col-sm-4">Build Version</dt>
+                <dd class="col-sm-8">1.0</dd>
+            </dl>
+        </dd>
+    </dl>
+</div>
+{%endblock content%}

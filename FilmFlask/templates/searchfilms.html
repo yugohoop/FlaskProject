@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">FilmFlixDB Search</h1>
+            <p class="col-lg-10 fs-4"></p>
+            <div class="container-fluid">
+
+                <img class="img-fluid rounded" src=" ../static/images/pexels-jonathan-faria-2220314.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form method="post" class="p-4 p-md-5 border rounded-3 bg-light bx">
+                <small class="text-lg-center">Please Enter a Serach Term <br>(Feature In Development) </small>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="Title" name="Title" placeholder="Film title" value="" />
+                    <label for="Title">Film Title</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="int" class="form-control" id="Title" name="yearReleased" placeholder="yearReleased"
+                        value="" />
+                    <label for="Title">Year Released</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="rating" name="Rating" placeholder="Film Rating"
+                        value="" />
+                    <label for="Title">Rating</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="int" class="form-control" id="duration" name="Duration" placeholder="Film Duration"
+                        value="" />
+                    <label for="Title">Duration</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="Genre" name="Genre" placeholder="Song Genre" value="" />
+                    <label for="Title">Genre</label>
+                </div>
+
+                <button disabled class="w-100 btn btn-lg btn-primary" type="submit">
+                    Serach Film
+                </button>
+                <hr class="my-4" />
+                <small class="text-muted">
+                    Search confirmation will be displayed here</small>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

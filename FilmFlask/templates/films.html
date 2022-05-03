@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+
+<h1 class="display-4 fw-bold lh-1 mb-3">FilmFlix DataBase</h1>
+<table class="table table-hover border-2 table-striped">
+  <thead>
+    <th scope="col">FilmID</th>
+    <th scope="col">Title</th>
+    <th scope="col">Year Released</th>
+    <th scope="col">Rating</th>
+    <th scope="col">Duration</th>
+    <th scope="col">Genre</th>
+  </thead>
+  <tbody>
+    {% for row in filmsInDB %}
+    <tr>
+      <td>{{row["FilmID"]}}</td>
+      <td>{{row["Title"]}}</td>
+      <td>{{row["YearReleased"]}}</td>
+      <td>{{row["Rating"]}}</td>
+      <td>{{row["Duration"]}}</td>
+      <td>{{row["Genre"]}}</td>
+
+      <td>
+        <button type="button" class="btn btn-sm">
+          <a
+            class="text-decoration-none"
+            href="{{url_for('update', filmID=row['filmID'])}}"
+            >Update</a
+          >
+        </button>
+        <form
+          action="{{url_for('delete', filmID=row['filmID'])}}"
+          method="POST"
+        >
+          <input
+            type="submit"
+            value="Delete"
+            onclick="confirm('Do you want to delete this film?')"
+            class="btn btn-sm mt-1 m-lg-1"
+          />
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{%endblock content%}
